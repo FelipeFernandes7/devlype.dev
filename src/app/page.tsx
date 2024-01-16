@@ -4,9 +4,14 @@ import { Wrapper } from "@/components/wrapper";
 import profileImg from "../../public/picture-profile.jpg";
 import saveAs from "file-saver";
 import Image from "next/image";
+import { useState } from "react";
+import { FiLoader } from "react-icons/fi";
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+
   function handleDownloadPdf() {
+    setLoading(true);
     const pdfURL = "/pdfs/cv-code.pdf";
 
     fetch(pdfURL)
@@ -15,6 +20,7 @@ export default function Home() {
         saveAs(blob, "Felipe CV.pdf");
       })
       .catch((error) => console.error("Erro ao baixar o PDF:", error));
+    setLoading(false);
   }
 
   return (
@@ -45,7 +51,11 @@ export default function Home() {
             onClick={handleDownloadPdf}
             className="hover:opacity-65 bg-gradient-to-r from-[#4f46e5] to-[#1d4ed8] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
           >
-            Download cv
+            {loading ? (
+              <FiLoader className="animate-spin" size={26} color={"#fff"} />
+            ) : (
+              "Download CV"
+            )}
           </button>
           <button className=" hover:opacity-65 bg-transparent border-2 border-[#1d4ed8] text-[#1d4ed8] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300">
             Contato
