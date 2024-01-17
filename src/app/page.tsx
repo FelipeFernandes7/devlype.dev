@@ -48,7 +48,7 @@ export default function Home() {
             Download CV"
           </button>
           <button className=" hover:opacity-65 bg-transparent border-2 border-[#c026d3] text-[#c026d3] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300">
-            Contato
+            Contact
           </button>
         </div>
       </section>

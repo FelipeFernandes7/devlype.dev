@@ -1,6 +1,8 @@
-import { Career } from "@/components/career";
 import { Wrapper } from "@/components/wrapper";
 import { job } from "@/data/career";
+import { Career } from "./career";
+import { Education } from "./education";
+import { education } from "@/data/education";
 
 export default function About() {
   return (
@@ -28,6 +30,25 @@ export default function About() {
                 endDate={job.endDate}
                 location={job.location}
                 icon={<job.icon size={24} color="#ffff" />}
+              />
+            ))}
+          </div>
+        </section>
+        <section className="w-full flex flex-col items-center justify-center mt-5 mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#db2777] to-[#e879f9] bg-clip-text text-transparent mt-5">
+            Education
+          </h1>
+          <div className="w-full flex flex-wrap items-center mt-4 flex-grow gap-5 justify-center">
+            {education.map((educ) => (
+              <Education
+                key={educ.institution}
+                institution={educ.institution}
+                course={educ.course}
+                startDate={educ.startDate}
+                endDate={educ.endDate}
+                location={educ.location}
+                icon={<educ.icon size={24} color="#ffff" />}
+                languages={educ.languages}
               />
             ))}
           </div>
