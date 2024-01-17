@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Navbar } from "@/components/navbar";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,19 +15,13 @@ export const metadata = {
       en: "https://devlype.dev",
     },
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@devlype",
-    creator: "@devlype",
-  },
+
   authors: [
     {
       name: "Felipe Fernandes",
       url: "https://devlype.dev",
     },
   ],
-  themeColor: "#08070b",
-  colorScheme: "dark",
   keywords: ["Felipe Fernandes", "devlype", "devlypedotdev", "devlype.dev"],
   openGraph: {
     type: "website",
