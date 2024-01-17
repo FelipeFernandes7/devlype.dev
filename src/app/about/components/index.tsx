@@ -1,7 +1,5 @@
 import { Job } from "@/data/career";
-import { IconButton } from "@radix-ui/themes";
 import { ReactNode } from "react";
-import { IconBase, IconType } from "react-icons";
 
 export function Career({
   company,
