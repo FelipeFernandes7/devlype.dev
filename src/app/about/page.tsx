@@ -1,7 +1,8 @@
+"use client";
+
 import { Wrapper } from "@/components/wrapper";
 import { Career } from "./components";
 import { job } from "@/data/career";
-import { IconBaseProps } from "react-icons";
 
 export default function About() {
   return (
