@@ -1,6 +1,6 @@
+import { Career } from "@/components/career";
 import { Wrapper } from "@/components/wrapper";
 import { job } from "@/data/career";
-import { Career } from "./career";
 
 export default function About() {
   return (
