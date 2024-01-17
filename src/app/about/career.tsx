@@ -1,5 +1,3 @@
-"use client";
-
 import { Job } from "@/data/career";
 import { ReactNode } from "react";
 

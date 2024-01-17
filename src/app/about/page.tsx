@@ -1,8 +1,6 @@
-"use client";
-
 import { Wrapper } from "@/components/wrapper";
-import { Career } from "./components";
 import { job } from "@/data/career";
+import { Career } from "./career";
 
 export default function About() {
   return (
