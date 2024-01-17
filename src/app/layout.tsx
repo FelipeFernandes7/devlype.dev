@@ -6,11 +6,21 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Felipe Fernandes",
-  creator: "Felipe Fernandes",
+  description: "Meu Portfólio",
   keywords: ["Felipe Fernandes", "devlype", "devlypedotdev", "devlype.dev"],
-} satisfies Metadata;
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+    },
+  },
+};
 
 export default function RootLayout({
   children,
