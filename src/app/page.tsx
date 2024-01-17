@@ -37,7 +37,7 @@ export default function Home() {
             objectFit="cover"
             className="rounded-full h-56 w-56  "
           />
-          <span className="w-full flex items-center text-center mt-4 text-xs font-medium uppercase tracking-[0.075em] text-secondary max-w-5xl">
+          <span className="w-full flex items-center text-center mt-4 font-medium text-lg max-w-5xl">
             I am a software developer with a predominant focus on the front-end,
             but I also have extensive knowledge of the back-end. I am looking
             for an opportunity that allows me to face challenges and continue to
@@ -46,7 +46,7 @@ export default function Home() {
             forward to contributing significantly to the team's success.
           </span>
         </div>
-        <div className="w-full flex flex-col items-center justify-center gap-4 md:flex-row mt-4">
+        <div className="w-full flex flex-col items-center justify-center gap-4 md:flex-row mt-4 mb-2">
           <button
             onClick={handleDownloadPdf}
             className="hover:opacity-65 bg-gradient-to-r from-[#4f46e5] to-[#1d4ed8] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
