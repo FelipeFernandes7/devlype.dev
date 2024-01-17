@@ -19,7 +19,7 @@ export function Career({
           {icon as unknown as ReactNode}
         </button>
       </div>
-      <section className="w-full flex flex-col mt-2">
+      <section className="w-full flex md:flex-col mt-2">
         <h1 className="text-lg font-bold bg-gradient-to-r from-[#0ea5e9] to-[#22d3ee] bg-clip-text text-transparent">
           {company}
         </h1>
