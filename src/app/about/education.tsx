@@ -16,7 +16,7 @@ export function Education(education: EducationProps) {
           {education.course}
         </h1>
         <p className="text-xs font-medium">
-          {education.startDate} -{" "}
+          {education.startDate} -
           {!education.endDate ? "Until now" : education.endDate}
         </p>
       </section>
