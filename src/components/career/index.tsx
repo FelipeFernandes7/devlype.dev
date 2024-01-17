@@ -10,7 +10,7 @@ export function Career({
   icon,
 }: Job) {
   return (
-    <article className="w-full flex flex-col p-4 border-2 border-slate-600 max-w-[300px] rounded-lg shadow-md min-h-[160px]">
+    <article className="w-full flex flex-col p-4 border-2 border-slate-600 md:max-w-[300px] rounded-lg shadow-md min-h-[160px]">
       <div className="flex w-full gap-2 items-center h-full">
         <h1 className=" w-full text-lg font-bold bg-gradient-to-r from-[#db2777] to-[#e879f9] bg-clip-text text-transparent whitespace-pre-wrap">
           {jobTitle}
