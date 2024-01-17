@@ -60,7 +60,7 @@ export function Navbar() {
         </ul>
       </nav>
       <aside className="order-2 ml-auto mr-3 flex items-center">
-        <div className="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-2 ease-in-out hover:bg-hover text-3xl font-bold hover:opacity-60 transition-all duration-300">
+        <div className="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-2 ease-in-out hover:bg-hover text-3xl font-medium hover:opacity-60 transition-all duration-300">
           ⌘
         </div>
       </aside>
