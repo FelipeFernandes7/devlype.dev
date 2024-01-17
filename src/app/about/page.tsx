@@ -18,7 +18,7 @@ export default function About() {
         </span>
         <section className="w-full flex flex-col items-center justify-center mt-5 mb-2">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-[#db2777] to-[#e879f9] bg-clip-text text-transparent mt-5">
-            My Journey
+            Experience
           </h1>
           <div className="w-full flex flex-wrap items-center mt-4 flex-grow gap-5 justify-center">
             {job.map((job) => (
