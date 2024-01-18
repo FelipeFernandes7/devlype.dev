@@ -1,4 +1,4 @@
 # My Personal Portifolio Website
 
 
-![Descrição da Imagem](readmeImg.png)
+![Descrição da Imagem](readmeImg.jpeg)
