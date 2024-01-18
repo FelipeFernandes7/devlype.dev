@@ -1,4 +1,6 @@
-# My Personal Portifolio Website
+# My Personal Portfolio Website
 
 
-![Descrição da Imagem](readmeImg.jpeg)
+![Meu Portfólio](readmeImg.jpeg)
+
+### In progress...
