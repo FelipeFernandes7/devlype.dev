@@ -48,7 +48,7 @@ export function Navbar() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="absolute left-0 right-0 top-[7px] -z-10 rounded-lg bg-gradient-to-r from-[#c026d3] to-[#4338ca] p-5"
+                        className="absolute left-0 right-0 top-[7px] -z-10 rounded-lg bg-gradient-to-r from-[#18181b] to-[#334155] p-5"
                       />
                     )}
                     {page}

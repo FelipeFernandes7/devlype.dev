@@ -1,10 +1,11 @@
 import { Education as EducationProps } from "@/data/education";
 import { ReactNode } from "react";
+
 export function Education(education: EducationProps) {
   return (
-    <article className="w-full flex flex-col p-4 border-2 border-slate-600 md:max-w-[300px] rounded-lg shadow-md min-h-[160px] hover:scale-105 transition-all duration-300 cursor-pointer">
+    <article className="w-full flex flex-col p-4 border-2 border-slate-600 md:max-w-[300px] rounded-3xl  shadow-md min-h-[160px] hover:scale-105 transition-all duration-300 cursor-pointer">
       <div className="flex w-full gap-2 items-center h-full">
-        <h1 className=" w-full text-lg font-bold bg-gradient-to-r from-[#db2777] to-[#e879f9] bg-clip-text text-transparent text-ellipsis truncate whitespace-nowrap overflow-hidden">
+        <h1 className=" w-full text-lg font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent text-ellipsis truncate whitespace-nowrap overflow-hidden">
           {education.institution}
         </h1>
         <button className=" active:scale-95 transition-all duration-300">
