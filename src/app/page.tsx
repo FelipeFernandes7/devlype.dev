@@ -4,8 +4,13 @@ import { Wrapper } from "@/components/wrapper";
 import profileImg from "../../public/picture-profile.jpg";
 import saveAs from "file-saver";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const handleContact = () => {
+    router.push("/contact");
+  };
   function handleDownloadPdf() {
     const pdfURL = "/pdfs/cv-code.pdf";
 
@@ -47,7 +52,10 @@ export default function Home() {
           >
             Download CV
           </button>
-          <button className=" hover:opacity-65 bg-transparent border-2 border-[#22d3ee] text-[#22d3ee] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300">
+          <button
+            onClick={handleContact}
+            className=" hover:opacity-65 bg-transparent border-2 border-[#22d3ee] text-[#22d3ee] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
+          >
             Contact
           </button>
         </div>
