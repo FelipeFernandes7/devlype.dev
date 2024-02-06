@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <Wrapper>
       <div className="w-full flex items-center justify-center flex-col">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent mt-5">
+        <h1 className="text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
           Welcome to my Projects
         </h1>
         <section className="w-full flex flex-wrap items-center mt-4 flex-grow gap-5 justify-center mb-4">

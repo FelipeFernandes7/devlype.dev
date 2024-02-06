@@ -12,7 +12,7 @@ export function Career({
   return (
     <article className="w-full flex flex-col p-4 border-2 border-slate-600 md:max-w-[300px] rounded-3xl shadow-md min-h-[160px] hover:scale-105 transition-all duration-300 cursor-pointer">
       <div className="flex w-full gap-2 items-center h-full">
-        <h1 className=" w-full text-lg font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent whitespace-pre-wrap">
+        <h1 className=" w-full text-lg font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent whitespace-pre-wrap">
           {jobTitle}
         </h1>
         <button className=" active:scale-95 transition-all duration-300">

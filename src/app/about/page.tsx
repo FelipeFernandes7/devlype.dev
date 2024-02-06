@@ -8,7 +8,7 @@ export default function About() {
   return (
     <Wrapper>
       <div className="w-full flex md:items-center justify-center flex-col max-w-5xl mx-auto">
-        <h1 className="flex justify-start text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent mt-5">
+        <h1 className="flex justify-start text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
           Who am I?
         </h1>
         <span className="w-full flex items-center text-left mt-4 md:text-center ">
@@ -17,7 +17,7 @@ export default function About() {
           be the ideal path to follow, since I've always loved technology.
         </span>
         <section className="w-full flex flex-col items-center justify-center mt-5 mb-2">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent mt-5">
+          <h1 className="text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
             Experience
           </h1>
           <div className="w-full flex flex-wrap items-center mt-4 flex-grow gap-5 justify-center">
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </section>
         <section className="w-full flex flex-col items-center justify-center mt-5 mb-2">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent mt-5">
+          <h1 className="text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
             Education
           </h1>
           <div className="w-full flex flex-wrap items-center mt-4 flex-grow gap-5 justify-center">

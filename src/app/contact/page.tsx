@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <Wrapper>
       <div className="w-full flex flex-col justify-center items-center md:max-w-96 mx-auto">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent mt-5">
+        <h1 className="text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
           It would be a pleasure to receive a message from you
         </h1>
         <form className="w-full flex flex-col px-2 gap-4 md:max-w-96 md:px-0 mt-8 mb-4">
@@ -58,7 +58,7 @@ export default function Contact() {
             error={errors.message}
             placeholder="Send me an message"
           />
-          <button className="w-full md:h-11 h-14 font-medium text-lg bg-gradient-to-r from-[#2563eb] to-[#22d3ee] rounded-xl mt-5 active:scale-95 transition-all duration-300">
+          <button className="w-full md:h-11 h-14 font-medium text-lg bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] rounded-xl mt-5 active:scale-95 transition-all duration-300">
             Send
           </button>
         </form>
