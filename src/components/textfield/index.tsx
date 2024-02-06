@@ -28,7 +28,7 @@ export function TextField({
       <section
         className={`w-full h-14 md:h-11 mt-1 ${
           error ? "border-2 border-red-500" : "border-[1px] border-slate-600"
-        } flex rounded-xl items-center px-4 bg-neutral-900 justify-between`}
+        } flex rounded-xl items-center px-4 bg-transparent justify-between`}
       >
         {register && name ? (
           <input

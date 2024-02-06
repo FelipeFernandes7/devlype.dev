@@ -26,7 +26,7 @@ export function Message({
       <section
         className={`w-full mt-1 ${
           error ? "border-2 border-red-500" : "border-[1px] border-slate-600"
-        } flex rounded-xl items-center bg-neutral-900 justify-between`}
+        } flex rounded-xl items-center bg-transparent justify-between`}
       >
         {register && name ? (
           <textarea
