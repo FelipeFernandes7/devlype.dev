@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaGripfire } from "react-icons/fa6";
 export function Navbar() {
-  const pages = ["about", "projects", "contacts"] as const;
+  const pages = ["about", "projects", "contact"] as const;
   const pathname = usePathname();
   const [hovered, setHovered] = useState("");
   return (
