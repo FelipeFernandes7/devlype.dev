@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Message } from "./message";
+import { IoMdSend } from "react-icons/io";
 
 export default function Contact() {
   const schema = z.object({
@@ -58,8 +59,9 @@ export default function Contact() {
             error={errors.message}
             placeholder="Send me an message"
           />
-          <button className="w-full md:h-11 h-14 font-medium text-lg bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] rounded-xl mt-5 active:scale-95 transition-all duration-300">
+          <button className="hover:opacity-75 flex items-center justify-center w-full md:h-11 h-14 font-medium text-lg bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] rounded-xl mt-5 active:scale-95 transition-all duration-300">
             Send
+            <IoMdSend size={20} className="ml-2 text-white" />
           </button>
         </form>
       </div>
