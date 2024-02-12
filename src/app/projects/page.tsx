@@ -11,15 +11,14 @@ export default function Projects() {
         </h1>
         <section className="w-full flex flex-wrap items-center mt-4 flex-grow gap-5 justify-center mb-4">
           {project.map((item) => {
-            const { id, background, repo, stacks, title, url } = item;
             return (
               <Project
-                key={id}
-                title={title}
-                background={background}
-                stacks={stacks}
-                repo={repo}
-                url={url}
+                key={item.id}
+                url={item.url}
+                repo={item.repo}
+                title={item.title}
+                stacks={item.stacks}
+                image={item.image}
               />
             );
           })}

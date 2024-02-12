@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Message } from "./message";
-import { IoMdSend } from "react-icons/io";
+import { IoSend } from "react-icons/io5";
 
 export default function Contact() {
   const schema = z.object({
@@ -50,7 +50,7 @@ export default function Contact() {
             name="email"
             register={register}
             error={errors.email}
-            placeholder="Type your e-mail"
+            placeholder="john.doe@gmail.com"
           />
           <Message
             label="Mensagem"
@@ -58,10 +58,17 @@ export default function Contact() {
             register={register}
             error={errors.message}
             placeholder="Send me an message"
+            onInput={(e) => {
+              const target = e.target as HTMLTextAreaElement;
+              target.style.height = "auto";
+              target.style.height = target.scrollHeight + "px";
+            }}
           />
-          <button className="hover:opacity-75 flex items-center justify-center w-full md:h-11 h-14 font-medium text-lg bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] rounded-xl mt-5 active:scale-95 transition-all duration-300">
-            Send
-            <IoMdSend size={20} className="ml-2 text-white" />
+          <button className="relative hover:opacity-75 flex items-center w-full p-3.5  font-medium text-sm bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] justify-end px-4 rounded-xl mt-5 active:scale-95 transition-all duration-300">
+            <p className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
+              Send
+            </p>
+            <IoSend className=" text-white text-sm " />
           </button>
         </form>
       </div>

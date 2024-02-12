@@ -1,4 +1,4 @@
-import mySecrets from "@/assets/my-secrets.jpg";
+import mySecrets from "@/assets/mysecrets-refactored.jpeg";
 import iGames from "@/assets/igames.jpeg";
 import systemControl from "@/assets/system-control.jpg";
 import webTasks from "@/assets/web-tasks.jpg";
@@ -9,7 +9,7 @@ import { StaticImageData } from "next/image";
 export interface Projects {
   id: number;
   title: string;
-  background: StaticImageData;
+  image: StaticImageData;
   stacks: string[];
   repo: string;
   url?: string;
@@ -19,15 +19,15 @@ export const project: Projects[] = [
   {
     id: 1,
     title: "My Secrets",
-    background: mySecrets,
+    image: mySecrets,
     repo: "https://github.com/FelipeFernandes7/my-secrets",
-    url: "https://mysecrets7.vercel.app/",
-    stacks: ["ReactJs", "TypeScript", "Chakra-UI", "Vercel", "Firebase"],
+    url: "https://my-secrets2.vercel.app/",
+    stacks: ["ReactJs", "TypeScript", "Tailwind", "Vercel", "Firebase"],
   },
   {
     id: 2,
     title: "IGames",
-    background: iGames,
+    image: iGames,
     repo: "https://github.com/FelipeFernandes7/Igames",
     url: "https://igames-nine.vercel.app/",
     stacks: [
@@ -42,7 +42,7 @@ export const project: Projects[] = [
   {
     id: 3,
     title: "Game List",
-    background: gameCard,
+    image: gameCard,
     repo: "https://github.com/FelipeFernandes7/game-list-react-native",
     url: "",
     stacks: ["React Native", "ExpoGO", "TypeScript", "Styled-Components"],
@@ -50,7 +50,7 @@ export const project: Projects[] = [
   {
     id: 4,
     title: "System Control",
-    background: systemControl,
+    image: systemControl,
     repo: "https://github.com/FelipeFernandes7/system-control",
     url: "",
     stacks: [
@@ -66,7 +66,7 @@ export const project: Projects[] = [
   {
     id: 5,
     title: "Web Tasks",
-    background: webTasks,
+    image: webTasks,
     repo: "https://github.com/FelipeFernandes7/todo-list",
     url: "https://tasks-bice.vercel.app/",
     stacks: ["ReactJs", "NextJs", "TypeScript", "Tailwind", "Vercel"],

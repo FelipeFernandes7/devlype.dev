@@ -30,14 +30,14 @@ export function Message({
       >
         {register && name ? (
           <textarea
-            className="w-full outline-none bg-transparent text-white p-2"
+            className="w-full outline-none bg-transparent text-white p-2 overflow-hidden transition-all ease-linear duration-300"
             {...register(name)}
             {...(label ? { id: name } : {})}
             {...rest}
           />
         ) : (
           <textarea
-            className="w-full outline-none bg-transparent text-white p-2"
+            className="w-full outline-none bg-transparent text-white p-2 overflow-hidden transition-all ease-linear duration-300"
             {...(label ? { id: name } : {})}
             {...rest}
           />

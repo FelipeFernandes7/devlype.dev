@@ -5,66 +5,66 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 import { FaEye, FaGithub } from "react-icons/fa";
+import { MdOutlineVerified } from "react-icons/md";
 
 interface ProjectsProps {
   title: string;
-  background: StaticImageData;
+  image: StaticImageData;
   stacks: string[];
   repo: string;
   url?: string;
 }
-export function Project({
-  background,
-  repo,
-  stacks,
-  title,
-  url,
-}: ProjectsProps) {
+export function Project({ image, repo, stacks, title, url }: ProjectsProps) {
   const router = useRouter();
   const handleNavigate = (path: string) => {
     router.push(path);
   };
 
   return (
-    <div className="w-full border-[1px] border-slate-600 h-full min-h-500 md:max-w-[350px] rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
-      <section className="flex flex-col w-full">
+    <div className="cursor-pointer hover:scale-105 transition-all duration-300 w-full md:max-w-[350px] border-[1px] border-slate-600 rounded-2xl flex flex-col">
+      <div className="w-full h-full relative">
         <Image
-          src={background}
-          alt={"my projects"}
-          width={350}
-          height={200}
-          objectFit="cover"
+          src={image}
+          className="rounded-t-2xl w-full h-36 object-cover"
+          alt="My Projects"
           quality={100}
-          className="rounded-t-2xl w-full"
         />
-        <h1 className="text-lg font-bold text-white px-4 mt-1">{title}</h1>
-      </section>
-      <div className="w-full flex flex-wrap items-center mt-4 flex-grow gap-2 justify-center">
-        {stacks.map((stack) => (
-          <span
-            key={stack}
-            className="rounded-xl text-slate-600 bg-transparent border-[1px] border-slate-600 px-2"
+        <div className="flex absolute top-3 right-3 gap-2 ">
+          {url && (
+            <Link
+              href={url}
+              target="_blank"
+              className="hover:bg-slate-800 active:scale-95 transition-all duration-300 text-white p-2 rounded-full bg-slate-700"
+            >
+              <FaEye size={24} />
+            </Link>
+          )}
+          <Link
+            href={repo}
+            target="_blank"
+            className="hover:bg-slate-800 active:scale-95 transition-all duration-300 text-white p-2 rounded-full bg-slate-700"
           >
-            {stack}
-          </span>
-        ))}
-      </div>
-      <div className="w-full flex gap-4 items-center justify-end px-4 p-4">
-        <Link href={repo} target="_blank">
-          <FaGithub
-            className="text-slate-600 active:scale-95 transition-all duration-300"
-            size={24}
-          />
-        </Link>
-        {url && (
-          <Link href={url} target="_blank">
-            <FaEye
-              className="text-slate-600 active:scale-95 transition-all duration-300"
-              size={24}
-            />
+            <FaGithub size={24} />
           </Link>
-        )}
+        </div>
       </div>
+      <section className="p-4 w-full flex flex-col items-center justify-center">
+        <h1 className="w-full font-bold text-xl bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent">
+          {title}
+        </h1>
+        <p className="font-bold text-medium w-full py-2">Stacks:</p>
+        <div className="w-full flex flex-wrap justify-center items-center gap-2">
+          {stacks.map((item) => (
+            <p
+              key={item}
+              className="font-bold text-xs border-[1px] border-slate-600 px-1 rounded-full flex items-center"
+            >
+              {item}
+              <MdOutlineVerified className="text-[#34d399] text-xs ml-2" />
+            </p>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
