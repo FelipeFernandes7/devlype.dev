@@ -15,14 +15,13 @@ export const env = createEnv({
   },
   client: {},
   runtimeEnv: {
-    NODE_ENV: process.env.NODE_ENV as string,
-    NODEMAILER_USER: process.env.NODEMAILER_USER as string,
-    NODEMAILER_PASSWORD: process.env.NODEMAILER_PASSWORD as string,
-    KV_REST_API_READ_ONLY_TOKEN: process.env
-      .KV_REST_API_READ_ONLY_TOKEN as string,
-    KV_REST_API_TOKEN: process.env.KV_REST_API_TOKEN as string,
-    KV_REST_API_URL: process.env.KV_REST_API_URL as string,
-    KV_URL: process.env.KV_URL as string,
+    NODE_ENV: process.env.NODE_ENV,
+    NODEMAILER_USER: process.env.NODEMAILER_USER,
+    NODEMAILER_PASSWORD: process.env.NODEMAILER_PASSWORD,
+    KV_REST_API_READ_ONLY_TOKEN: process.env.KV_REST_API_READ_ONLY_TOKEN,
+    KV_REST_API_TOKEN: process.env.KV_REST_API_TOKEN,
+    KV_REST_API_URL: process.env.KV_REST_API_URL,
+    KV_URL: process.env.KV_URL,
   },
   skipValidation: !!process.env.CI,
 });
