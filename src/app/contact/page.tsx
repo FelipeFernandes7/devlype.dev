@@ -22,7 +22,7 @@ export default function Contact() {
 
   const onSubmit = async (data: EmailSchema) => {
     try {
-      await fetch("/email", {
+      await fetch("api/email", {
         body: JSON.stringify(data),
         method: "POST",
       });
