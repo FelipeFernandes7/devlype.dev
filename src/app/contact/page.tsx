@@ -7,9 +7,12 @@ import { useForm } from "react-hook-form";
 import { Message } from "./message";
 import { IoSend } from "react-icons/io5";
 import { EmailSchema, emailSchema } from "@/schemas/emails";
+import { useState } from "react";
+import { ImSpinner2 } from "react-icons/im";
 import toast from "react-hot-toast";
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -22,22 +25,30 @@ export default function Contact() {
 
   const onSubmit = async (data: EmailSchema) => {
     try {
+      setIsLoading(true);
       await fetch("api/email", {
         body: JSON.stringify(data),
         method: "POST",
       });
 
       toast.success("Email successfully sent :)", {
-        position: "bottom-right",
-        style: { background: "#181818", color: "#fff" },
+        position: "bottom-center",
+        style: {
+          background: "#18181b",
+          color: "#fff",
+        },
       });
+      setIsLoading(false);
       reset();
     } catch (e) {
       console.error(e);
 
       toast.error("Oops, it looks like there was an error :(", {
-        position: "bottom-right",
-        style: { background: "#e11d48", color: "#fff" },
+        position: "bottom-center",
+        style: {
+          background: "#18181b",
+          color: "#fff",
+        },
       });
     }
   };
@@ -85,11 +96,12 @@ export default function Contact() {
               target.style.height = target.scrollHeight + "px";
             }}
           />
-          <button className="relative hover:opacity-75 flex items-center w-full p-4  font-medium text-sm bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] justify-end px-4 rounded-xl mt-5 active:scale-95 transition-all duration-300">
-            <p className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
-              Send
-            </p>
-            <IoSend className=" text-white text-sm " />
+          <button className="hover:opacity-75 flex items-center w-full h-12 font-medium text-lg bg-gradient-to-r from-[#4f46e5] to-[#c026d3] justify-center rounded-xl mt-5 active:scale-95 transition-all duration-300">
+            {isLoading ? (
+              <ImSpinner2 className="animate-spin text-xl" />
+            ) : (
+              "Send"
+            )}
           </button>
         </form>
       </div>
