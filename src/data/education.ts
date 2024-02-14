@@ -1,9 +1,4 @@
-import { IconType } from "react-icons";
-import { BiLogoTypescript } from "react-icons/bi";
-import { FaNodeJs, FaReact } from "react-icons/fa";
-import { IoLogoCss3, IoSchool } from "react-icons/io5";
-import { SiExpress } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { IoSchool } from "react-icons/io5";
 
 export interface Education {
   institution: string;
@@ -12,7 +7,6 @@ export interface Education {
   endDate?: string;
   icon: any;
   location?: string;
-  languages?: IconType[];
 }
 
 export const education: Education[] = [
@@ -30,14 +24,6 @@ export const education: Education[] = [
     startDate: "Feb 2020",
     endDate: "Apr 2020",
     icon: IoSchool,
-    languages: [
-      FaReact,
-      BiLogoTypescript,
-      FaNodeJs,
-      SiExpress,
-      TbBrandNextjs,
-      IoLogoCss3,
-    ],
   },
   {
     institution: "Udemy",
@@ -45,13 +31,5 @@ export const education: Education[] = [
     startDate: "Oct 2023",
     endDate: "Until now",
     icon: IoSchool,
-    languages: [
-      FaReact,
-      BiLogoTypescript,
-      FaNodeJs,
-      SiExpress,
-      TbBrandNextjs,
-      IoLogoCss3,
-    ],
   },
 ];
