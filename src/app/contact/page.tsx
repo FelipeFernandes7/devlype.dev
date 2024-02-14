@@ -5,7 +5,6 @@ import { Wrapper } from "@/components/wrapper";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Message } from "./message";
-import { IoSend } from "react-icons/io5";
 import { EmailSchema, emailSchema } from "@/schemas/emails";
 import { useState } from "react";
 import { ImSpinner2 } from "react-icons/im";
