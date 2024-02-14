@@ -47,8 +47,7 @@ export default function About() {
                 startDate={educ.startDate}
                 endDate={educ.endDate}
                 location={educ.location}
-                icon={<educ.icon size={24} color="#ffff" />}
-                languages={educ.languages}
+                icon={<educ.icon />}
               />
             ))}
           </div>
