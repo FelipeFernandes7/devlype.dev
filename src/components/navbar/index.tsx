@@ -11,7 +11,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [hovered, setHovered] = useState("");
   return (
-    <header className=" z-30 mt-3 flex min-h-[3.75rem] w-full flex-wrap items-center text-xs text-white md:mt-0">
+    <header className=" z-30 mt-3 flex min-h-[3.75rem] w-full flex-wrap items-center text-xs text-white md:mt-0 px-1">
       <Link
         href="/"
         className="order-1 ml-3 flex cursor-pointer appearance-none items-center justify-center rounded-lg border-none bg-transparent font-heading font-bold text-white transition-colors duration-200 ease-in-out hover:bg-hover"
@@ -44,7 +44,7 @@ export function Navbar() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="absolute left-0 right-0 top-[7px] -z-10 rounded-lg bg-gradient-to-r from-[#18181b] to-[#334155] p-5"
+                        className="absolute left-0 right-0 top-[7px] -z-10 rounded-lg bg-gradient-to-r from-[#4f46e5] to-[#1d4ed8] p-5"
                       />
                     )}
                     {page}
@@ -56,7 +56,7 @@ export function Navbar() {
         </ul>
       </nav>
       <aside className="order-2 ml-auto mr-3 flex items-center">
-        <div className="flex cursor-pointer items-center justify-center rounded-lg bg-transparent ease-in-out hover:bg-hover text-xl font-medium hover:opacity-60 transition-all duration-300">
+        <div className="flex cursor-pointer items-center justify-center rounded-lg bg-transparent ease-in-out hover:bg-hover text-2xl font-medium hover:opacity-60 transition-all duration-300">
           ⌘
         </div>
       </aside>
