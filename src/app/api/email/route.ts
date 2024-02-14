@@ -67,7 +67,7 @@ export const POST = async (req: Request) => {
       await mailTransporter.sendMail({
         from: data.name,
         to: env.NODEMAILER_USER,
-        subject: `${data.name} - via Felipe Fernandes`,
+        subject: `${data.name} - Para Felipe Fernandes`,
         html: emailHtml,
       });
 
