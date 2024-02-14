@@ -11,6 +11,13 @@ export interface Education {
 
 export const education: Education[] = [
   {
+    institution: "Prime Cursos",
+    course: "Programming logic",
+    startDate: "Oct 2020",
+    endDate: "Dec 2020",
+    icon: IoSchool,
+  },
+  {
     institution: "ETEC - Antônio de Pádua Cardoso",
     course: "Análise e Desenvolvimento de Sistemas",
     startDate: "Feb 2021",

@@ -19,7 +19,7 @@ export function Education({
           </h1>
           <Icon className="w-4 h-4 text-white " icon={icon} />
         </div>
-        <span className="w-full text-sm font-bold whitespace-pre-wrap text-ellipsis truncate whitespace-nowrap overflow-hidden">
+        <span className="w-full text-sm font-bold text-ellipsis truncate whitespace-nowrap overflow-hidden">
           {institution} {location && "- " + location}
         </span>
 
