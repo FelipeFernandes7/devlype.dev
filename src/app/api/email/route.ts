@@ -68,6 +68,7 @@ export const POST = async (req: Request) => {
         from: data.name,
         to: env.NODEMAILER_USER,
         subject: `${data.name} - Para Felipe Fernandes`,
+        replyTo: data.email,
         html: emailHtml,
       });
 
