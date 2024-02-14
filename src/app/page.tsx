@@ -36,7 +36,7 @@ export default function Home() {
             objectFit="cover"
             className="rounded-full h-56 w-56  "
           />
-          <span className="w-full flex items-center text-center mt-4 font-medium text-lg max-w-5xl">
+          <span className="w-full flex items-center text-center mt-4 font-normal text-lg max-w-5xl">
             I am a software developer with a predominant focus on the front-end,
             but I also have extensive knowledge of the back-end. I am looking
             for an opportunity that allows me to face challenges and continue to
@@ -48,13 +48,13 @@ export default function Home() {
         <div className="w-full flex flex-col items-center justify-center gap-4 md:flex-row mt-4 mb-2">
           <button
             onClick={handleDownloadPdf}
-            className="hover:opacity-65 bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
+            className="hover:opacity-65 bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] p-3 text-lg font-medium rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
           >
             Download CV
           </button>
           <button
             onClick={handleContact}
-            className=" hover:opacity-65 bg-transparent border-2 border-[#4f46e5] text-[#4f46e5] p-3 text-lg font-bold rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
+            className=" hover:opacity-65 bg-transparent border-2 border-[#4f46e5] text-[#4f46e5] p-3 text-lg font-medium rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
           >
             Contact
           </button>

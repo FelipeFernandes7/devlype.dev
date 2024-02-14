@@ -14,13 +14,9 @@ export function Navbar() {
     <header className=" z-30 mt-3 flex min-h-[3.75rem] w-full flex-wrap items-center text-xs text-white md:mt-0">
       <Link
         href="/"
-        className="order-1 ml-3 flex cursor-pointer appearance-none items-center justify-center rounded-lg border-none bg-transparent p-2 font-heading font-bold text-white transition-colors duration-200 ease-in-out hover:bg-hover"
+        className="order-1 ml-3 flex cursor-pointer appearance-none items-center justify-center rounded-lg border-none bg-transparent font-heading font-bold text-white transition-colors duration-200 ease-in-out hover:bg-hover"
       >
-        <FaGripfire
-          size={44}
-          color="#fff"
-          className="hover:opacity-60 transition-all duration-300"
-        />
+        <FaGripfire className="hover:opacity-60 transition-all duration-300 text-white text-3xl" />
       </Link>
       <nav className="order-3 flex-1 basis-full overflow-x-auto overflow-y-hidden text-center md:order-2 md:basis-[initial]">
         <ul className="relative top-[5px] inline-flex list-none justify-around">
@@ -60,7 +56,7 @@ export function Navbar() {
         </ul>
       </nav>
       <aside className="order-2 ml-auto mr-3 flex items-center">
-        <div className="flex cursor-pointer items-center justify-center rounded-lg bg-transparent p-2 ease-in-out hover:bg-hover text-3xl font-medium hover:opacity-60 transition-all duration-300">
+        <div className="flex cursor-pointer items-center justify-center rounded-lg bg-transparent ease-in-out hover:bg-hover text-xl font-medium hover:opacity-60 transition-all duration-300">
           ⌘
         </div>
       </aside>
