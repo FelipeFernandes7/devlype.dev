@@ -1,6 +1,6 @@
 "use client";
 
-import { Wrapper } from "@/components/wrapper";
+import { LayoutPage } from "@/components/layoutPage";
 import { useRouter } from "next/navigation";
 import { IoIosReturnLeft } from "react-icons/io";
 
@@ -11,7 +11,7 @@ export default function NotFound() {
   };
 
   return (
-    <Wrapper>
+    <LayoutPage>
       <div className="w-full h-[70vh] flex items-center justify-center flex-col">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#22d3ee] bg-clip-text text-transparent mt-5 text-center">
           Oops, it looks like this page doesn't exist :(
@@ -24,6 +24,6 @@ export default function NotFound() {
           <IoIosReturnLeft className="ml-2 text-slate-600" size={24} />
         </button>
       </div>
-    </Wrapper>
+    </LayoutPage>
   );
 }

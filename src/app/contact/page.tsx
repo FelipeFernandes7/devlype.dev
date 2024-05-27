@@ -1,7 +1,6 @@
 "use client";
 
 import { TextField } from "@/components/textfield";
-import { Wrapper } from "@/components/wrapper";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Message } from "./message";
@@ -9,6 +8,7 @@ import { EmailSchema, emailSchema } from "@/schemas/emails";
 import { useState } from "react";
 import { ImSpinner2 } from "react-icons/im";
 import toast from "react-hot-toast";
+import { LayoutPage } from "@/components/layoutPage";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,7 @@ export default function Contact() {
   };
 
   return (
-    <Wrapper>
+    <LayoutPage>
       <div className="w-full flex flex-col justify-center items-center md:max-w-96 mx-auto">
         <h1 className="text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
           It would be a pleasure to receive a message from you
@@ -104,6 +104,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-    </Wrapper>
+    </LayoutPage>
   );
 }
