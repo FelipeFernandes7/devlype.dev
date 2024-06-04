@@ -6,7 +6,7 @@ interface LayoutPageProps {
 
 export function LayoutPage({ children }: LayoutPageProps) {
   return (
-    <main className="w-full flex justify-center items-center h-full max-w-7xl mx-auto px-4">
+    <main className="w-full flex justify-center items-center h-full mx-auto px-4 md:px-0">
       {children}
     </main>
   );
