@@ -1,16 +1,14 @@
 "use client";
 
-import { Wrapper } from "@/components/wrapper";
-import profileImg from "../../public/picture-profile.jpg";
+import picture from "@/assets/picture-profile.jpg";
+import { Skills } from "@/components/skills";
+import { home } from "@/data/home";
+import { skills } from "@/data/skills";
 import saveAs from "file-saver";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
-  const router = useRouter();
-  const handleContact = () => {
-    router.push("/contact");
-  };
   function handleDownloadPdf() {
     const pdfURL = "/pdfs/cv-code.pdf";
 
@@ -23,43 +21,46 @@ export default function Home() {
   }
 
   return (
-    <Wrapper>
-      <section className="w-full items-center justify-center flex flex-col gap-4">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
+    <div className="w-full flex flex-col items-center md:max-w-7xl">
+      <div className="w-full items-center flex flex-col my-5">
+        <h1 className="my-5 text-4xl font-bold bg-gradient-to-r from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent">
           Software Engineer
         </h1>
-        <div className="w-full flex items-center justify-center flex-col">
+        <div className="gap-4 w-full flex flex-col justify-center mt-5 md:flex-row ">
           <Image
-            src={profileImg}
-            alt={"my profile picture"}
+            src={picture}
+            alt={"Myself"}
             quality={100}
+            className="w-full md:max-w-[500px] md:max-h-[500px] rounded-lg"
             objectFit="cover"
-            className="rounded-full h-56 w-56  "
           />
-          <span className="w-full flex items-center text-center mt-4 font-normal text-lg max-w-5xl">
-            I am a software developer with a predominant focus on the front-end,
-            but I also have extensive knowledge of the back-end. I am looking
-            for an opportunity that allows me to face challenges and continue to
-            evolve with the company. I am ambitious and want to advance in my
-            professional career. I have a passion for programming and look
-            forward to contributing significantly to the team's success.
-          </span>
+          <div className="w-full h-full flex flex-col">
+            <h1>{home.description}</h1>
+            <div
+              onClick={handleDownloadPdf}
+              className="w-full h-full flex flex-col md:flex-row md:justify-start justify-end items-center"
+            >
+              <button className="w-full flex items-center justify-center bg-red-200 p-4 rounded-xl my-5 bg-gradient-to-r from-[#4f46e5] to-[#c026d3] cursor-pointer active:scale-95 transition-all duration-300 md:max-w-[300px]">
+                Download Cv
+                <FiDownload className="ml-2" />
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="w-full flex flex-col items-center justify-center gap-4 md:flex-row mt-4 mb-2">
-          <button
-            onClick={handleDownloadPdf}
-            className="hover:opacity-65 bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] p-3 text-lg font-medium rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
-          >
-            Download CV
-          </button>
-          <button
-            onClick={handleContact}
-            className=" hover:opacity-65 bg-transparent border-2 border-[#4f46e5] text-[#4f46e5] p-3 text-lg font-medium rounded-full w-full md:max-w-52 text-center active:scale-95 transition-all duration-300"
-          >
-            Contact
-          </button>
-        </div>
+        <h1 className="mt-5 text-4xl font-bold bg-gradient-to-r from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent">
+          My Skills
+        </h1>
+      </div>
+      <section className="w-full flex flex-wrap items-center justify-center gap-4">
+        {skills.map((item) => (
+          <Skills
+            key={item.programmingLanguage}
+            icon={item.languageIcon}
+            programmingLanguage={item.programmingLanguage}
+            rating={item.rating}
+          />
+        ))}
       </section>
-    </Wrapper>
+    </div>
   );
 }

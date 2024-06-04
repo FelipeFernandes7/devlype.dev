@@ -1,10 +1,10 @@
-import { Wrapper } from "@/components/wrapper";
+import { LayoutPage } from "@/components/layoutPage";
 import { Project } from "./project";
 import { project } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <Wrapper>
+    <LayoutPage>
       <div className="w-full flex items-center justify-center flex-col">
         <h1 className="text-4xl font-bold bg-gradient-to-r  from-[#4f46e5] to-[#c026d3] bg-clip-text text-transparent mt-5">
           Welcome to my Projects
@@ -24,6 +24,6 @@ export default function Projects() {
           })}
         </section>
       </div>
-    </Wrapper>
+    </LayoutPage>
   );
 }

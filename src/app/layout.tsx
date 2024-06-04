@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import { Toaster } from "react-hot-toast";
 
 import "./globals.css";
+import { LayoutPage } from "@/components/layoutPage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         <Toaster />
-        {children}
+        <LayoutPage>{children}</LayoutPage>
       </body>
     </html>
   );
