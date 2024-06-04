@@ -6,15 +6,9 @@ import { home } from "@/data/home";
 import { skills } from "@/data/skills";
 import saveAs from "file-saver";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
-  const router = useRouter();
-  const handleContact = () => {
-    router.push("/contact");
-  };
-
   function handleDownloadPdf() {
     const pdfURL = "/pdfs/cv-code.pdf";
 
@@ -42,7 +36,10 @@ export default function Home() {
           />
           <div className="w-full h-full flex flex-col">
             <h1>{home.description}</h1>
-            <div className="w-full h-full flex flex-col md:flex-row md:justify-start justify-end items-center">
+            <div
+              onClick={handleDownloadPdf}
+              className="w-full h-full flex flex-col md:flex-row md:justify-start justify-end items-center"
+            >
               <button className="w-full flex items-center justify-center bg-red-200 p-4 rounded-xl my-5 bg-gradient-to-r from-[#4f46e5] to-[#c026d3] cursor-pointer active:scale-95 transition-all duration-300 md:max-w-[300px]">
                 Download Cv
                 <FiDownload className="ml-2" />
