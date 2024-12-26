@@ -2,7 +2,7 @@
 
 import { LayoutPage } from "@/components/layoutPage";
 import { useRouter } from "next/navigation";
-import { IoIosReturnLeft } from "react-icons/io";
+import { Loader2 } from "lucide-react";
 
 export default function NotFound() {
   const router = useRouter();
@@ -21,7 +21,7 @@ export default function NotFound() {
           className=" flex items-center border-[1px] border-slate-600 p-4 md:p-3 rounded-xl text-sm font-bold mt-6 active:scale-95 transition-all duration-300"
         >
           Return to home
-          <IoIosReturnLeft className="ml-2 text-slate-600" size={24} />
+          <Loader2 className="ml-2 text-slate-600" size={24} />
         </button>
       </div>
     </LayoutPage>
